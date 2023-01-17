@@ -1,0 +1,60 @@
+<div class="p-5 bg-image" style="
+ height: 75vh;
+  background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+">
+</div>
+
+<div class="container my-5">
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: -500px;
+  background: hsla(0, 0%, 100%, 0.5);
+  backdrop-filter: blur(25px);
+  width: 100%;
+  border-radius: 1rem;
+  ">
+  <h1 class="mb-4">Edit Warehouse</h1>
+
+  <div class="row">
+    <div class="col-6">
+
+      <form #form="ngForm" style="margin-left: 10px" (ngSubmit)="updateWarehouse()">
+
+        <div class="mb-3">
+          <label for="id">Id</label>
+          <input type="text" class="form-control" id="id" readonly name="id"
+           [(ngModel)]="warehouseDetails.id">
+        </div>
+
+        <div class="mb-3">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name"
+           [(ngModel)]="warehouseDetails.name"
+          placeholder="Enter name">
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" name="address"
+           [(ngModel)]="warehouseDetails.address"
+          placeholder="Enter address">
+        </div>
+
+        <div class="mb-3">
+          <label for="coOrdinates">Co-ordinates</label>
+          <input type="text" class="form-control" id="coOrdinates" name="coOrdinates"
+          [(ngModel)]="warehouseDetails.coOrdinates"
+          placeholder="Enter coordinates">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin: 0 10px 10px 10px;">Save</button>
+        <button type="button" class="btn btn-primary" style="margin: 0 10px 10px 10px;"
+         (click)="goBack()">Back to the list</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>

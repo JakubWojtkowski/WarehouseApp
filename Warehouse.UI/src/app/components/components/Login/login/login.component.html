@@ -1,0 +1,101 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+  height: 75vh;
+  background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+        "></div>
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-top: -500px;
+        background: hsla(0, 0%, 100%, 0.5);
+        backdrop-filter: blur(25px);
+        width: 60%;
+        border-radius: 2rem;
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-5">Login </h2>
+          <form (ngSubmit)="onLogin()">
+
+             <!-- ID input -->
+             <div class="form-outline mb-4">
+              <input type="number" min="0"  maxlength="2" max="33" step="1" id="id" class="form-control" name="id" [(ngModel)]="loginRequest.id"
+              placeholder="Your ID" autocomplete="off" required/>
+              <label class="form-label" for="email">User ID</label>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <span><i class="fa fa-envelope-o fa-fw"></i></span>
+              <input type="email" id="email" class="form-control" name="email" [(ngModel)]="loginRequest.email"
+              placeholder="Email address" required/>
+              <label class="form-label" for="email">Email address</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="password" class="form-control" name="password" [(ngModel)]="loginRequest.password"
+              placeholder="Password" required/>
+              <label class="form-label" for="password">Password</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="success"class="btn btn-primary btn-block mb-4">
+              Submit
+            </button>
+
+            <!-- <a class="small text-muted" href="register">Forgot password?</a>
+                <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account?
+                <a href="register" style="color: #393f81;"><b>Register here</b></a> </p> -->
+                <p  *ngIf="!isLoggedInMsal()" style="text-align: center;">or</p>
+
+            <button type="button" (click)="loginWithMsal()" *ngIf="!isLoggedInMsal()"  class="btn btn-primary btn-block mb-4">
+              sign in with Microsoft account
+            </button>
+            <h2 *ngIf="isLoggedInMsal()" >Welcome {{ getName() }}.</h2>
+            <button type="button"(click)="loggedWithMsal()" *ngIf="isLoggedInMsal()" style="background:linear-gradient(to top, #c9c9ff 2%, green 30%) no-repeat;" class="btn btn-primary btn-block mb-4-success">
+              Success. Click here to go further.
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  List of Users accounts
+  <table class="table" *ngIf="users && users.length > 0">
+    <thead>
+      <tr>
+        <th>domainId</th>
+        <th>id</th>
+        <th>userName</th>
+        <th>typeOfManager</th>
+        <th>phoneNumber</th>
+        <th>email</th>
+        <th>password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let users of users">
+        <td>{{ users.domainId }}</td>
+        <td>{{ users.id }}</td>
+        <td>{{ users.userName }}</td>
+        <td>{{ users.typeOfManager }}</td>
+        <td>{{ users.phoneNumber }}</td>
+        <td>{{ users.email }}</td>
+        <td>{{ users.password }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!users|| users.length <= 0">No users found.</p>
+  -->
+</section>
+

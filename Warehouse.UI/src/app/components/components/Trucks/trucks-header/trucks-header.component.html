@@ -1,0 +1,9 @@
+<header>
+    <h1>{{title}}</h1>
+    <app-button 
+        color="{{showCreateTruck ? 'red' : 'green'}}"
+        text="{{showCreateTruck ? 'Close' : 'Create'}}"
+        (btnClick)="toggleCreateTruck()"
+        data-testid="create-truck-button"
+    ></app-button>
+</header>

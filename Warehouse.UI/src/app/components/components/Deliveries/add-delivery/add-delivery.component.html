@@ -1,0 +1,61 @@
+<div class="p-5 bg-image" style="
+ height: 75vh;
+  background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+">
+</div>
+
+<div class="container my-5">
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: -500px;
+  background: hsla(0, 0%, 100%, 0.5);
+  backdrop-filter: blur(25px);
+  width: 100%;
+  border-radius: 1rem;
+  ">
+  <h1 class="mb-4">Add New Delivery</h1>
+
+  <div class="row">
+    <div class="col-6">
+
+      <form #form="ngForm" style="margin-left: 10px" (ngSubmit)="addDelivery()">
+
+        <div class="mb-3">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date" name="date" [(ngModel)]="addDeliveryRequest.dateOfDelivery"
+          placeholder="Enter date(YYYY-MM-DD)">
+        </div>
+
+        <div class="mb-3">
+          <label for="deliveryMass">Delivery mass</label>
+          <input type="number" class="form-control" id="deliveryMass" name="deliveryMass"[(ngModel)]="addDeliveryRequest.deliveryMass"
+          placeholder="Enter delivery mass in kilos">
+        </div>
+
+        <div class="mb-3">
+          <label for="warId">Warehouse ID</label>
+          <input type="number" class="form-control" id="warId" name="warId" [(ngModel)]="addDeliveryRequest.warehouseId"
+          placeholder="Enter proper warehouse ID">
+        </div>
+
+        <div class="mb-3">
+          <label for="placementTime">Placement time</label>
+          <input type="number" class="form-control" id="placementTime" name="placementTime" [(ngModel)]="addDeliveryRequest.placementTime"
+           placeholder="Enter placement time in min">
+        </div>
+
+        <div class="mb-3">
+          <label for="receiveTime">Receive time</label>
+          <input type="number" class="form-control" id="receiveTime" name="receiveTime" [(ngModel)]="addDeliveryRequest.receiveTime"
+           placeholder="Enter receive time in min">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin: 0 10px 10px 0px;">Save</button>
+        <button (click)="goBack()" type="submit" class="btn btn-primary" style="margin: 0 10px 10px 10px;">Back to the list</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

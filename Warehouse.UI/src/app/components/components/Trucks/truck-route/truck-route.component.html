@@ -1,0 +1,4 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <input type="submit" value="Get truck routes" class="btn btn-block" />
+</form>
+<app-truck-route-item *ngFor="let _ of arr(routesNum).fill(1); let i = index" [truck]="trucks[i]" [route]="routes[i]"></app-truck-route-item>

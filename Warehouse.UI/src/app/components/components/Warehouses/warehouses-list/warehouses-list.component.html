@@ -1,0 +1,50 @@
+<div class="p-5" style="
+  height: 75vh;
+  background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;">
+</div>
+
+<div class="container my-5">
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: -500px;
+  background: hsla(0, 0%, 100%, 0.5);
+  backdrop-filter: blur(25px);
+  width: 100%;
+  border-radius: 1rem;
+  ">
+  <h1 class="mb-3">Warehouses<a id="add" style="margin-left: 650px; font-size: 18px; text-decoration: none;" routerLink="add">Add new Warehouse</a></h1>
+
+
+  <table class="table" *ngIf="warehouses && warehouses.length > 0">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Addres</th>
+        <th>Co-ordinates</th>
+        <th>Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let warehouse of warehouses | slice:start:end; let i=index">
+        <td>{{ warehouse.id }}</td>
+        <td>{{ warehouse.name }}</td>
+        <td>{{ warehouse.address }}</td>
+        <td>{{ warehouse.coOrdinates }}</td>
+        <td>{{ warehouse.active }}</td>
+        <td *ngIf="warehouse.active == 'true'"><a id="inhibit" [accessKey]="i" class="btn btn-danger" [routerLink]="['/warehouses', 'inhibit', warehouse.id]" >Inhibit</a></td>
+        <td *ngIf="warehouse.active == 'false'"><a id="active" class="btn btn-success" [routerLink]="['/warehouses', 'active', warehouse.id]" >Active</a></td>
+        <td><a id="edit" [routerLink]="['/warehouses', 'edit', warehouse.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button *ngIf="start >= 10" (click)="previousPage()" type="button" class="btn btn-primary" style="margin: 0 10px 10px 10px; width: 100px;">Previous</button>
+    <button *ngIf="warehouses.length >= end" (click)="nextPage()" type="button" class="btn btn-primary" style=" margin: 0 10px 10px 10px; width: 100px">Next</button>
+  <p *ngIf="!warehouses || warehouses.length <= 0">No warehouses found.</p>
+  </div>
+</div>
+</div>

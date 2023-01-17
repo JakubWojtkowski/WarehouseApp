@@ -1,0 +1,88 @@
+<div class="p-5 bg-image" style="
+height: 75vh;
+ background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+">
+</div>
+
+<div class="container my-5">
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: -550px;
+  background: hsla(0, 0%, 100%, 0.6);
+  backdrop-filter: blur(25px);
+  width: 100%;
+  border-radius: 1rem;
+  ">
+
+<section style="background: hsla(0, 0%, 100%, 0.0);">
+  <div class="container py-5">
+
+    <div id="row" class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4" style=" background: hsla(0, 0%, 100%, 0.0);">
+          <div id="card" class="card-body text-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+              class="rounded-circle img-fluid" style="width: 150px;">
+            <h5 class="my-3">{{user.userName}}</h5>
+            <p class="text-muted mb-1">{{user.typeOfManager}}</p>
+            <div class="d-flex justify-content-center mb-2">
+
+              <!-- cancel account button -->
+              <!-- <button type="button" class="btn btn-outline-danger ms-1"
+              (click)="cancelUserAccount()">Cancel account</button> -->
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">User Name | </p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{user.userName}}</p>
+                <p class="text-muted mb-0">{{getName()}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Type of manager |</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{user.typeOfManager}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email | </p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{user.email}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Phone | </p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{user.phoneNumber}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+</div>
+

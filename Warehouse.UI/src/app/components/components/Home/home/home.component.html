@@ -1,0 +1,58 @@
+<div class="p-5 bg-image" style="
+height: 100vh;
+background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+      "></div>
+<!-- Background image -->
+
+<div class="card mx-4 mx-md-5 shadow-5-strong" style="
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin-top: -800px;
+      background: hsla(0, 0%, 100%, 0.5);
+      backdrop-filter: blur(25px);
+      width: 70%;
+      border-radius: 2rem;
+      ">
+    <div class="card-body py-5 px-md-5">
+
+        <div class="menu-div">
+          <button id="warehouses" type="submit" (click)="goToWarehouses()" class="btn btn-info btn-block mb-5" style="border-radius: 1rem;"><b>Warehouses & Deliveries</b></button>
+        </div>
+
+        <div class="menu-div">
+          <button id="trucks" type="submit"(click)="goToTrucks()" class="btn btn-info btn-block mb-5" style="border-radius: 1rem;"><b>Trucks</b></button>
+        </div>
+
+        <div class="menu-div">
+          <button id="paths" type="submit"(click)="goToPaths()" class="btn btn-info btn-block mb-5" style="border-radius: 1rem;"><b>Paths</b></button>
+        </div>
+
+        <div class="menu-div">
+          <button id="routes" type="submit"(click)="goToRoutes()" class="btn btn-info btn-block mb-5" style="border-radius: 1rem;"><b>Routes</b></button>
+        </div>
+
+    </div>
+</div>
+<!--
+const spnText = document.querySelector('.text');
+const spnCursor = document.querySelector('.cursor');
+const txt = 'Welcome on our page. Where would you like to go?';
+
+// Parametry
+let indexText = 0;
+const time = 40;
+
+// Implementacja
+const addLetter = () => {
+ spnText.textContent += txt[indexText];
+ indexText++;
+ if (indexText === txt.length) clearInterval(indexTyping);
+}
+
+const cursorAnimation = () => {
+ spnCursor.classList.toggle('active');
+}
+
+const indexTyping = setInterval(addLetter, time);
+setInterval(cursorAnimation, 400); -->

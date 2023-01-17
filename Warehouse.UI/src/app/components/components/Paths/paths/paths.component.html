@@ -1,0 +1,2 @@
+<app-add-path (onAddPath)="addPath($event)"></app-add-path>
+<app-path-item *ngFor="let path of paths" [path]="path" (onDeletePath)="deletePath(path)"></app-path-item>

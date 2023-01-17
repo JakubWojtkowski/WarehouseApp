@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="isLoggedIn || isLoggedInMsal()">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="app.component.css">
+
+<div class="container">
+  <a class="navbar-brand" style="color: rgb(175,175,175); padding-right:175px;">ElectricAcme <i class="fa fa-truck" aria-hidden="true"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+   data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav"  *ngIf="HomeOption == 'warehouses'" >
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="warehouses">Warehouses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="deliveries">Deliveries</a>
+      </li>
+
+    </ul>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav"  *ngIf="HomeOption == 'trucks'" >
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link"  (click)="switchOffnav()" routerLink="paths">Paths</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="switchOffnav()" routerLink="routes">Routes</a>
+      </li>
+
+    </ul>
+  </div>
+  <a class="nav-link"  (click)="switchOffnav()" routerLink="home" style="color: rgb(175,175,175)">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+  <a class="nav-link"  routerLink="profile" style="color: rgb(175,175,175)">User profile <i class='fa fa-user-circle'></i> </a>
+  <a class="nav-link" *ngIf="isAdmin" routerLink="accounts" style="color: rgb(175,175,175)">Accounts management <i class="fa fa-cog" aria-hidden="true"></i></a>
+  <a id="logout" *ngIf="isLoggedIn || isLoggedInMsal()" routerLink="logout" class="nav-link" style="color: rgb(175,175,175);"><b>Log-out </b><i class='fa fa-sign-out'></i></a>
+
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,53 @@
+
+
+<div class="p-5 bg-image" style="
+height: 75vh;
+">
+</div>
+
+<div class="container my-5">
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: -500px;
+  background: hsla(0, 0%, 100%, 0.5);
+  backdrop-filter: blur(25px);
+  width: 100%;
+  border-radius: 1rem;
+  ">
+   <h1 class="mb-3">Routes</h1>
+  <!--   <table class="table" *ngIf="routes && routes.length > 0">
+    <thead>
+      <tr>
+        <th>Tare</th>
+        <th>Load capacity</th>
+        <th>Maximum battery charge</th>
+        <th>Autonomy when fully charged</th>
+        <th>Fast charging time</th>
+        <th>Is active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let route of routes | slice:start:end; let i=index" >
+       </!-- <td>{{ i }}</td> --/>
+       <td>{{ route.tare }}</td>
+       <td>{{ route.load_capacity }}</td>
+       <td>{{ route.maximum_battery_charge }}</td>
+       <td>{{ route.autonomy_when_fully_charged }}</td>
+       <td>{{ route.fast_charging_time }}</td>
+       <td>{{ route.is_active }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <button *ngIf="start >= 10" (click)="previousPage()" type="button" class="btn btn-primary" style="margin: 0 10px 10px 10px; width: 100px;">Previous</button>
+  <button *ngIf="routes.length >= end" (click)="nextPage()" type="button" class="btn btn-primary" style=" margin: 0 10px 10px 10px; width: 100px">Next</button>
+  <p *ngIf ="!routes || routes.length <= 0">No routes found.</p>
+
+</div>
+-->
+</div>
+</div>
+
+<app-truck-route-box></app-truck-route-box>

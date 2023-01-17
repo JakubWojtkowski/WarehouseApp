@@ -1,0 +1,33 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+  height: 75vh;
+  background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+        "></div>
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-top: -500px;
+        background: hsla(0, 0%, 100%, 0.5);
+        backdrop-filter: blur(25px);
+        width: 60%;
+        border-radius: 2rem;
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-5">Active a Warehouse <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></h2>
+          <h5>Are you sure you want to active<b> {{warehouseDetails.name}} </b>Warehouse?</h5>
+          <button (click)="activeWarehouse()" class="btn btn-success" style="margin: 10px 10px 0 10px; width: 100px"><b>Yes</b></button>
+          <button (click)="back()" class="btn btn-danger" style="margin: 10px 10px 0 10px; width: 100px;"><b>No</b></button>
+        </div>
+
+
+      </div>
+    </div>
+

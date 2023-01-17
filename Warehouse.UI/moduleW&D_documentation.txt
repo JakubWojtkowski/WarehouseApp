@@ -1,0 +1,8 @@
+The Warehouses & Deliveries front-end was created using Angular framework. As a warehouse and delivery manager I can list, edit, and add warehouse or delivery. These elements both relate to SQL relational database using .NET API created by our team during the sprint A. The UI is represented by 4 subpages:
+-	Warehouses -> which show us list of warehouses, there you can also edit or delete (this option is additional functionality added by us) warehouse chosen by you
+-	Deliveries -> which show us list of deliveries, there you can also edit or delete (this option is additional functionality added by us) delivery chosen by you 
+-	Add New Warehouse -> which enables us to add new warehouse after validating all typed data, new warehouse is adding to our relational database
+-	Add New Delivery -> which enables us to add new delivery after validating all typed data, new delivery is adding to our relational database
+Application includes end to end tests wrote using cypress. 
+
+

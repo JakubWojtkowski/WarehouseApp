@@ -1,0 +1,27 @@
+<form *ngIf="showCreateTruck" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="tare">Tare</label>
+        <input type="number" name="tare" data-testid="tare_input" [(ngModel)]="tare" placeholder="Add Tare">
+    </div>
+    <div class="form-control">
+        <label for="load_capacity">Load capacity</label>
+        <input type="number" name="load_capacity" data-testid="load_capacity_input" [(ngModel)]="load_capacity" placeholder="Add Load capacity">
+    </div>
+    <div class="form-control">
+        <label for="maximum_battery_charge">Maximum battery charge</label>
+        <input type="number" name="maximum_battery_charge" data-testid="maximum_battery_charge_input"[(ngModel)]="maximum_battery_charge" placeholder="Add Maximum battery charge">
+    </div>
+    <div class="form-control">
+        <label for="autonomy_when_fully_charged">Autonomy when fully charged</label>
+        <input type="number" name="autonomy_when_fully_charged" data-testid="autonomy_when_fully_charged_input" [(ngModel)]="autonomy_when_fully_charged" placeholder="Add Autonomy when fully charged">
+    </div>
+    <div class="form-control">
+        <label for="fast_charging_time">Fast charging time</label>
+        <input type="number" name="fast_charging_time" data-testid="fast_charging_time_input"[(ngModel)]="fast_charging_time" placeholder="Add Fast charging time">
+    </div>
+    <div class="form-control">
+        <label for="is_active">Is active</label>
+        <input type="boolean" name="is_active" data-testid="is_active_input"[(ngModel)]="is_active" placeholder="Specify truck activity">
+    </div>
+    <input type="submit" value="Save Truck" data-testid="save_truck_button" class="btn btn-block" />
+</form>

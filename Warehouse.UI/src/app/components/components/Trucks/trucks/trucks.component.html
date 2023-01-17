@@ -1,0 +1,4 @@
+
+<app-add-truck (onAddTruck)="addTruck($event)"></app-add-truck>
+<app-truck-item *ngFor="let truck of trucks" [truck]="truck" (onDeleteTruck)="deleteTruck(truck)" (onInhibitTruck)="patchTruck($event)"></app-truck-item>
+

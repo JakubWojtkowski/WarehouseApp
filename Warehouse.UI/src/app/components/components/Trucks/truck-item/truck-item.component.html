@@ -1,0 +1,22 @@
+<div class="truck">
+    <h3>ID: {{truck?._id}}
+        <!-- <fa-icon
+        [ngStyle]="{'color': 'red'}"
+        [icon]="faTimes"
+        (click)="onDelete(truck)"
+    ></fa-icon> -->
+    </h3>
+    <p>Domain ID: {{truck?.domainId}}</p>
+    <p>Tare: {{truck?.tare}}</p>
+    <p>Load capacity: {{truck?.load_capacity}}</p>
+    <p>Maximum battery charge: {{truck?.maximum_battery_charge}}</p>
+    <p>Autonomy when fully charged: {{truck?.autonomy_when_fully_charged}}</p>
+    <p>Fast charging time: {{truck?.fast_charging_time}}</p>
+    <p>Is active: {{truck?.is_active}}</p>
+    <app-button 
+    color="{{truck?.is_active ? 'red' : 'green'}}"
+    text="{{truck?.is_active ? 'Inhibit' : 'Activate'}}"
+    (btnClick)="onInhibit()"
+    data-testid="inhibit-truck-button"
+    ></app-button>
+</div>

@@ -1,0 +1,52 @@
+
+<div class="p-5 bg-image" style="
+height: 75vh;
+">
+</div>
+
+<div class="container my-5">
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: -500px;
+  background: hsla(0, 0%, 100%, 0.5);
+  backdrop-filter: blur(25px);
+  width: 100%;
+  border-radius: 1rem;
+  ">
+   <h1 class="mb-3">Paths</h1>
+   <table class="table" *ngIf="paths && paths.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Domain ID</th>
+        <th>Departure warehouse</th>
+        <th>Arrival warehouse</th>
+        <th>Distance</th>
+        <th>Time</th>
+        <th>Energy used</th>
+        <th>Extra time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let path of paths | slice:start:end; let i=index" >
+       <td>{{ path._id }}</td>
+       <td>{{ path.domainId }}</td>
+       <td>{{ path.departure_warehouse }}</td>
+       <td>{{ path.arrival_warehouse }}</td>
+       <td>{{ path.distance }}</td>
+       <td>{{ path.time }}</td>
+       <td>{{ path.energy_used }}</td>
+       <td>{{ path.extra_time }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <button *ngIf="start >= 5" (click)="previousPage()" type="button" class="btn btn-primary" style="margin: 0 10px 10px 10px; width: 100px;">Previous</button>
+  <button *ngIf="paths.length > end" (click)="nextPage()" type="button" class="btn btn-primary" style=" margin: 0 10px 10px 10px; width: 100px">Next</button>
+  <p *ngIf ="!paths || paths.length <= 0">No paths found.</p>
+</div>
+</div>
+</div>
+ <!--  -->

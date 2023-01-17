@@ -1,0 +1,96 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+       height: 75vh;
+  background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+        "></div>
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-top: -500px;
+        background: hsla(0, 0%, 100%, 0.5);
+        backdrop-filter: blur(25px);
+        width: 60%;
+        border-radius: 2rem;
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-4">Create a User account</h2>
+          <form (ngSubmit)="signUp()">
+             <!-- TypeOfUser input -->
+             <div class="form-outline mb-4">
+              <select [(ngModel)]="userRegisterRequest.typeOfManager" name = "dropdown" required>
+
+                <option id="war" value = "Warehouse manager" >Warehouse manager</option>
+                <option value = "Fleet manager">Fleet manager</option>
+                <option value = "Logistics manager">Logistics manager</option>
+                </select><br>
+              <label class="form-label" for="form3Example3">Click to choose type of manager</label>
+
+              <div class="form-outline mb-4">
+                <input type="number" id="id" name="id" [(ngModel)]="userRegisterRequest.id"
+                class="form-control"  min="1" max="99" minlength="1" maxlength="2" placeholder="User personal ID" required/>
+                <label class="form-label" for="id">User ID (it's required to log-in)</label>
+              </div>
+
+            </div>
+
+            <!-- 2 column grid layout with text inputs for the userName and phone num -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <input type="text" id="userName" class="form-control" name="userName"  [(ngModel)]="userRegisterRequest.userName"
+                  placeholder="User name" required/>
+                  <label class="form-label" for="userName">User name</label>
+
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="tel" id="tel" class="form-control" name="tel" [(ngModel)]="userRegisterRequest.phoneNumber"
+                  minlength="9" maxlength="9" placeholder="123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required/>
+                  <label class="form-label" for="tel">Phone number</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="email" name="email" [(ngModel)]="userRegisterRequest.email"
+              class="form-control"  minlength="7" maxlength="30" placeholder="Email address" required/>
+              <label class="form-label" for="email">Email address</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="password" class="form-control" name="password" [(ngModel)]="userRegisterRequest.password"
+              ng-minlength="9" maxlength="21" placeholder="Password" required/>
+              <label class="form-label" for="password">Password (length min. 9)</label>
+            </div>
+
+            <!-- Password confirmation input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="passwordConfirm" class="form-control" name="passwordConfirm" [(ngModel)]="userRegisterRequest.passwordConfirmed"
+              ng-minlength="9" maxlength="21" placeholder="Confirm your password" required/>
+              <label class="form-label" for="passwordConfirm">Confirm your password</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-success btn-block mb-4">
+              Click to submit
+            </button>
+            <button  (click)="goBack()" class="btn btn-danger btn-block mb-4">
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+{
+  "trucks": [
+    {
+      "id": 0,
+      "domainID": "1",
+      "tare": 20,
+      "load_capacity": 30,
+      "maximum_battery_charge": 10,
+      "autonomy_when_fully_charged": 25,
+      "fast_charging_time": 13
+    },
+    {
+      "id": 1,
+      "domainID": "2",
+      "tare": 3,
+      "load_capacity": 4,
+      "maximum_battery_charge": 5,
+      "autonomy_when_fully_charged": 67,
+      "fast_charging_time": 8
+    }
+  ],
+  "paths": [
+    {
+      "id": 0,
+      "domainID": "1",
+      "departure_warehouse": "A",
+      "arrival_warehouse": "B",
+      "distance": 13,
+      "time": 10,
+      "energy_used": 100,
+      "extra_time": 4
+    },
+    {
+      "id": 1,
+      "domainID": "2",
+      "departure_warehouse": "Krakow",
+      "arrival_warehouse": "Porto",
+      "distance": 1000,
+      "time": 100,
+      "energy_used": 15190,
+      "extra_time": 13
+    },
+    {
+      "id": 4,
+      "domainID": "4",
+      "departure_warehouse": "4",
+      "arrival_warehouse": "4",
+      "distance": 4,
+      "time": 4,
+      "energy_used": 4,
+      "extra_time": 4
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa7",
+      "dateOfDelivery": "2022-12-11T15:28:20.647Z",
+      "deliveryMass": 0,
+      "warehouseId": 0,
+      "placementTime": 0,
+      "receiveTime": 0
+    },
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+      "dateOfDelivery": "2022-12-11T15:28:20.647Z",
+      "deliveryMass": 0,
+      "warehouseId": 1,
+      "placementTime": 0,
+      "receiveTime": 0
+    },
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
+      "dateOfDelivery": "2022-12-11T15:28:20.647Z",
+      "deliveryMass": 0,
+      "warehouseId": 2,
+      "placementTime": 0,
+      "receiveTime": 0
+    }
+  ]
+}

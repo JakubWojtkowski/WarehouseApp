@@ -1,0 +1,27 @@
+<form *ngIf="showCreatePath" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="departure_warehouse">Departure Warehouse</label>
+        <input type="text" name="departure_warehouse" data-testid="departure_warehouse_input" [(ngModel)]="departure_warehouse" placeholder="Add Departure Warehouse">
+    </div>
+    <div class="form-control">
+        <label for="arrival_warehouse">Arrival Warehouse</label>
+        <input type="text" name="arrival_warehouse" data-testid="arrival_warehouse_input" [(ngModel)]="arrival_warehouse" placeholder="Add Arrival Warehouse">
+    </div>
+    <div class="form-control">
+        <label for="distance">Distance</label>
+        <input type="number" name="distance" data-testid="distance_input" [(ngModel)]="distance" placeholder="Add Distance">
+    </div>
+    <div class="form-control">
+        <label for="time">Time</label>
+        <input type="number" name="time" data-testid="time_input" [(ngModel)]="time" placeholder="Add Time">
+    </div>
+    <div class="form-control">
+        <label for="energy_used">Energy used</label>
+        <input type="number" name="energy_used" data-testid="energy_used_input" [(ngModel)]="energy_used" placeholder="Add Energy Used">
+    </div>
+    <div class="form-control">
+        <label for="extra_time">Extra Time</label>
+        <input type="number" name="extra_time" data-testid="extra_time_input"[(ngModel)]="extra_time" placeholder="Add Extra Time">
+    </div>
+    <input type="submit" value="Save Path" data-testid="save_path_button" class="btn btn-block" />
+</form>
