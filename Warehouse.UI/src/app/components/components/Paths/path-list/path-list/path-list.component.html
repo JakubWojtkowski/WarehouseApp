@@ -1,21 +1,21 @@
 
 <div class="p-5 bg-image" style="
 height: 75vh;
-">
-</div>
+background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+      "></div>
+<!-- Background image -->
 
-<div class="container my-5">
-  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  margin-top: -500px;
-  background: hsla(0, 0%, 100%, 0.5);
-  backdrop-filter: blur(25px);
-  width: 100%;
-  border-radius: 1rem;
-  ">
-   <h1 class="mb-3">Paths</h1>
+<div class="card mx-4 mx-md-5 shadow-5-strong" style="
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin-top: -700px;
+      background: hsla(0, 0%, 100%, 0.5);
+      backdrop-filter: blur(25px);
+      width: 60%;
+      border-radius: 2rem;
+      ">
+   <h1 class="mb-5">Paths</h1>
    <table class="table" *ngIf="paths && paths.length > 0">
     <thead>
       <tr>
@@ -48,5 +48,5 @@ height: 75vh;
   <p *ngIf ="!paths || paths.length <= 0">No paths found.</p>
 </div>
 </div>
-</div>
+
  <!--  -->

@@ -40,4 +40,5 @@ export class HomeComponent implements OnInit {
     this.app.HomeOption = 'routes';
     this.router.navigate(['routes']);
   }
+
 }

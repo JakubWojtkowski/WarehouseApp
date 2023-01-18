@@ -7,3 +7,13 @@
   float: left;
   width: 45%;
 }
+
+.cursor {
+  opacity: 0;
+  transition: .2s;
+ }
+
+
+ .cursor.active {
+  opacity: 1;
+ }
