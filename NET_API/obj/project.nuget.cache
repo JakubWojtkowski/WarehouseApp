@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m+Dipp0lLvMFHJYGfrE6pQuqQbdN/QHXv/7qavAqw38Cp0bmI902imTF5/1KObkkIMFCe2QS+M7TKAWrJcFsUw==",
+  "dgSpecHash": "dXOKstQ5HfbJPVgFsdd2c3R6cG8hACkahFxXMRX8eYgljLBtJSlsp63Xl5A2I9keGJiAOUMdzYxzahfkZxcQfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jw200\\OneDrive\\Pulpit\\NET_api_final\\WarehouseAPI.csproj",
+  "projectFilePath": "C:\\Users\\jw200\\OneDrive\\Pulpit\\Code\\WebApp_isep\\NET_API\\WarehouseAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jw200\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\jw200\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jw200\\OneDrive\\Pulpit\\NET_api_final\\WarehouseAPI.csproj": {}
+    "C:\\Users\\jw200\\OneDrive\\Pulpit\\Code\\WebApp_isep\\NET_API\\WarehouseAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jw200\\OneDrive\\Pulpit\\NET_api_final\\WarehouseAPI.csproj": {
+    "C:\\Users\\jw200\\OneDrive\\Pulpit\\Code\\WebApp_isep\\NET_API\\WarehouseAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jw200\\OneDrive\\Pulpit\\NET_api_final\\WarehouseAPI.csproj",
+        "projectUniqueName": "C:\\Users\\jw200\\OneDrive\\Pulpit\\Code\\WebApp_isep\\NET_API\\WarehouseAPI.csproj",
         "projectName": "WarehouseAPI",
-        "projectPath": "C:\\Users\\jw200\\OneDrive\\Pulpit\\NET_api_final\\WarehouseAPI.csproj",
+        "projectPath": "C:\\Users\\jw200\\OneDrive\\Pulpit\\Code\\WebApp_isep\\NET_API\\WarehouseAPI.csproj",
         "packagesPath": "C:\\Users\\jw200\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jw200\\OneDrive\\Pulpit\\NET_api_final\\obj\\",
+        "outputPath": "C:\\Users\\jw200\\OneDrive\\Pulpit\\Code\\WebApp_isep\\NET_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jw200\\AppData\\Roaming\\NuGet\\NuGet.Config",
